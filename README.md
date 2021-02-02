@@ -1,10 +1,5 @@
-# Workshop
+# Data 146
 
+## Informal Responses
 
-This is a markdown file. 
-
-## A picture
-
-![](Screen_shot.png)
-
-[assignment1](assignment1.md)
+[Blumenstock response 2/2](blumenstock.md)
