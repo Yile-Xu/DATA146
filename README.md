@@ -2,4 +2,4 @@
 
 ## Informal Responses
 
-[1](https://yile-xu.github.io/DATA146/1.html)
+[1](https://yile-xu.github.io/DATA146/exercise_2.6.html)
