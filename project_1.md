@@ -46,7 +46,13 @@ lowest_country
 In 1992, Rwanda in Africa	has the lowest life expectancy of only 23.599 years. That's because a large scale civil war between the Rwandan Armed Forces and the rebel Rwandan Patriotic Front (RPF) occured in Rwanda between 1990 and 1994. Millions of people died from this war. 
 
 ### •	Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
-
+```python
+data_4country_2007=data[(data['country'].isin(['Germany', 'France', 'Italy', 'Spain' ]))& (data['year']==2007)]
+data_4country_2007.sort_values(by=['gdp'], inplace=True,ascending=False)
+data_4country_2007.reset_index(inplace=True)
+print(data_4country_2007)
+```
+![](table1.png)
 
 ### •	You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 ### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
