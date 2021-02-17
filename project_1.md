@@ -57,8 +57,54 @@ print(data_4country_2007)
 Stretch goal: Germany exhibited the most significant increase in total gross domestic product. 
 
 ### •	You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
-### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
-### •	Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
-### •	Describe the apply() function from the pandas library. What is its purpose? Using apply) to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
-### •	Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+```python
+# '&' means 'and'. Both conditions need to be True to make an '&' statement True.
+# For example: subsetting data for which continent is Europe and year is 1952.
+new_df=data[(data['continent']=='Europe')&(data['year']== 1952)]
 
+# '==' means equivalence and it is used to evaluate whether objects on the two sides are equal to each other
+# For example: compare whether 1+1 equals 2
+1+1==2
+
+# '|' means 'inclusive or'. Either one of the conditions is ture or both statements are true can make an '|' statement True.
+# For example: subsetting data for which either continent is Europe or year is 1952 or both are true. 
+new_df=data[(data['continent']=='Europe')|(data['year']== 1952)]
+
+# ^ means 'exclusive or'. Only either one of the conditions can make an '^' statement True.
+# For example: subsetting data for which either continent is Europe or year is 1952.
+new_df=data[(data['continent']=='Europe')^(data['year']== 1952)]
+
+```
+
+### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
+.iloc fetches rows by thier integer positions while .loc  fetches the rows by its label(index of data frame).
+```python
+# example: extracts rows with integer positions from 0 to 10
+data.iloc[0:11]
+
+# Stretch goal example: extraxts all observations from columns 'country','continent' and 'year'.
+data[['country','continent','year']]
+```
+### •	Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
+API stands for Application Programming Interface and it is the software intermediary that delivers your request to the provider which you're requesting from and then delivers the response back to you.
+```python
+# Example:
+import os
+import requests
+import pandas as pd
+url = "https://api.covidtracking.com/v1/states/daily.csv"
+r = requests.get(url)
+with open(file_name, 'wb') as f:
+  f.write(r.content)
+```
+
+### •	Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
+The apply() function helps to sumbit each item from the series or data frame as an argument to any function specified. Using apply()to various class objects is an alternate to ?
+
+### •	Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
+The other approach is to passing selected column names in a list to the data frame and assign it to a new data frame.
+
+```python
+# Example:
+new_df=data[['country','continent','year']]
+```
