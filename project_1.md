@@ -29,10 +29,25 @@ data.shape
 data.size
 ```
 ### •	Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+```python
+import pandas as pd
+data=pd.read_csv('gapminder.tsv', sep='\t')
+data['year'].value_counts()
+```
+This variable exhibits regular intervals of 5 years. The latest year in the data frame is 2007, so in order to make it more current, I would add 2012 and 2017 to each subset of the observations. 
 
+Stretch goal: 142*2=284 new outcomes in total would be adding to the data frame. 
 
 ### •	Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation. 
+```python
+lowest_country=data[data['lifeExp']==data['lifeExp'].min()]
+lowest_country
+```
+In 1992, Rwanda in Africa	has the lowest life expectancy of only 23.599 years. That's because a large scale civil war between the Rwandan Armed Forces and the rebel Rwandan Patriotic Front (RPF) occured in Rwanda between 1990 and 1994. Millions of people died from this war. 
+
 ### •	Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
+
+
 ### •	You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 ### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 ### •	Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
