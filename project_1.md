@@ -77,13 +77,13 @@ new_df=data[(data['continent']=='Europe')^(data['year']== 1952)]
 ```
 
 ### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
-.iloc fetches rows by thier integer positions while .loc  fetches the rows by its label(index of data frame).
+.iloc fetches rows and columns by thier integer positions while .loc  fetches the rows and columnms by their labels(index of data frame).
 ```python
-# example: extracts rows with integer positions from 0 to 10
+# Example: extracts consecutive obervations (rows) with integer positions from 0 to 10
 data.iloc[0:11]
 
-# Stretch goal example: extraxts all observations from columns 'country','continent' and 'year'.
-data[['country','continent','year']]
+# Stretch goal example: extracts columns with integer positions from 0 to 4
+data.iloc[:,0:5]
 ```
 ### •	Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
 API stands for Application Programming Interface and it is the software intermediary that delivers your request to the provider which you're requesting from and then delivers the response back to you.
@@ -99,11 +99,10 @@ with open(file_name, 'wb') as f:
 ```
 
 ### •	Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
-The apply() function helps to sumbit each item from the series or data frame as an argument to any function specified. Using apply()to various class objects is an alternate to ?
+The apply() function helps to sumbit each item from the series or data frame as an argument to the function specified. Using apply() to various class objects is an alternative to writing a loop to submit each item to the function，but using the apply() function will be the easier way. This is why apply() could be a preferred approach. 
 
 ### •	Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
-The other approach is to passing selected column names in a list to the data frame and assign it to a new data frame.
-
+The other approach is to passing a list including selected column names to the data frame. 
 ```python
 # Example:
 new_df=data[['country','continent','year']]
