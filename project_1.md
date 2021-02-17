@@ -12,7 +12,25 @@ It’s a good ideas to use alias because the shorter term will make it easier to
 ### •	Describe what is a data frame? Identify a library of functions that is particularly useful for working with data frames. In order to read a file in its remote location within the file system of your operating system, which command would you use? Provide an example of how to read a file and import it into your work session in order to create a new data frame. Also, describe why specifying an argument within a read_() function can be significant. Does data that is saved as a file in a different type of format require a particular argument in order for a data frame to be successfully imported? Also, provide an example that describes a data frame you created. How do you determine how many rows and columns are in a data frame? Is there an alternate terminology for describing rows and columns? 
 
 A data frame is like a spread sheet which store multiple variables, and have columns and rows. Pandas library is useful for working with data frames. 
+```python
+# Read a file and create a new data frame: 
+import pandas as pd
+data=pd.read_csv('path_to_file_object')
+
+# If the data in file is not separated by comma, then a particular argument, sep='' is needed for the data frame to be successful imported.
+# For example, for a tab separated file
+data=pd.read_csv('path_to_file_object', sep='\t')
+
+# Describe a data frame
+data.describe()
+# Determine numbers of rows and columns
+data.shape
+# An alternate way to determine numbers
+data.size
+```
 ### •	Import the gapminder.tsv data set and create a new data frame. Interrogate and describe the year variable within the data frame you created. Does this variable exhibit regular intervals? If you were to add new outcomes to the raw data in order to update and make it more current, which years would you add to each subset of observations? Stretch goal: can you identify how many new outcomes in total you would be adding to your data frame?
+
+
 ### •	Using the data frame you created by importing the gapminder.tsv data set, determine which country at what point in time had the lowest life expectancy. Conduct a cursory level investigation as to why this was the case and provide a brief explanation in support of your explanation. 
 ### •	Using the data frame you created by importing the gapminder.tsv data set, multiply the variable pop by the variable gdpPercap and assign the results to a newly created variable. Then subset and order from highest to lowest the results for Germany, France, Italy and Spain in 2007. Create a table that illustrates your results (you are welcome to either create a table in markdown or plot/save in PyCharm and upload the image). Stretch goal: which of the four European countries exhibited the most significant increase in total gross domestic product during the previous 5-year period (to 2007)?
 ### •	You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
