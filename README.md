@@ -6,4 +6,4 @@
 
 ## Project
 
-1. [Project 1](...)
+1. [Project 1](https://yile-xu.github.io/DATA146/project_1.html)
