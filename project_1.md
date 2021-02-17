@@ -99,7 +99,7 @@ with open(file_name, 'wb') as f:
 ```
 
 ### •	Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
-The apply() function helps to sumbit each item from the series or data frame as an argument to the function specified. Using apply() to various class objects is an alternative to writing a loop to submit each item to the function，but using the apply() function will be the easier way. This is why apply() could be a preferred approach. 
+The apply() function helps to sumbit each item from the series or data frame as an argument to the specified function. Using apply() to various class objects is an alternative to writing a loop to submit each item to the function，but using the apply() function will be the easier way. This is why apply() could be a preferred approach. 
 
 ### •	Also describe an alternative approach to filtering the number of columns in a data frame. Instead of using .iloc, what other approach might be used to select, filter and assign a subset number of variables to a new data frame?
 The other approach is to passing a list including selected column names to the data frame. 
