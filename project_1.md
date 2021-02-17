@@ -79,7 +79,7 @@ new_df=data[(data['continent']=='Europe')^(data['year']== 1952)]
 ### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 .iloc fetches rows and columns by thier integer positions while .loc  fetches the rows and columnms by their labels(index of data frame).
 ```python
-# Example: extracts consecutive obervations (rows) with integer positions from 0 to 10
+# Example 1: extracts consecutive obervations (rows) with integer positions from 0 to 10
 data.iloc[0:11]
 
 # Stretch goal example: extracts columns with integer positions from 0 to 4
@@ -92,10 +92,12 @@ API stands for Application Programming Interface and it is the software intermed
 import os
 import requests
 import pandas as pd
+
 url = "https://api.covidtracking.com/v1/states/daily.csv"
 r = requests.get(url)
 with open(file_name, 'wb') as f:
   f.write(r.content)
+data = pd.read_csv(file_name)
 ```
 
 ### •	Describe the apply() function from the pandas library. What is its purpose? Using apply() to various class objects is an alternative (potentially preferable approach) to writing what other type of command? Why do you think apply() could be a preferred approach?
