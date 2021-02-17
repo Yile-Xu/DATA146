@@ -54,6 +54,8 @@ print(data_4country_2007)
 ```
 ![](table1.png)
 
+Stretch goal: Germany exhibited the most significant increase in total gross domestic product. 
+
 ### •	You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 ### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
 ### •	Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
