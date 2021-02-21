@@ -1,7 +1,7 @@
 # Project 1
 
 ### •	Describe what is a package? Also, describe what is a library? What are the two steps you need to execute in order to install a package and then make that library of functions accessible to your workspace and current python work session? Provide examples of how you would execute these two steps using two of the packages we have used in class thus far. Be sure to include an alias in at least one of your two examples and explain why it is a good idea to do so.
-A package is a directory having collections of modules as well as data such as versions and descriptions.   A library contains a collection of modules which can provide a wide range of related functionality. To make a library of functions accessible, the first step is to install the packages and the second step is to import the library and call specific functions. 
+A package is a directory having collections of modules as well as data such as versions and descriptions.   A library contains a collection of modules which can provide a wide range of related functionality. To make a library of functions accessible in Pycharm for example, the first step is to go to settings, click Python Interpreter, and install the package. The second step is to import the library and call specific functions. 
 ```python
 #Example: 
 import pandas as pd    
@@ -58,22 +58,21 @@ Stretch goal: Germany exhibited the most significant increase in total gross dom
 
 ### •	You have been introduced to four logical operators thus far: &, ==, | and ^. Describe each one including its purpose and function. Provide an example of how each might be used in the context of programming.
 ```python
-# '&' means 'and'. Both conditions need to be True to make an '&' statement True.
+# '&' means 'and'. An '&' statement will be True if both conditional statements are True.
 # For example: subsetting data for which continent is Europe and year is 1952.
 new_df=data[(data['continent']=='Europe')&(data['year']== 1952)]
 
-# '==' means equivalence and it is used to evaluate whether objects on the two sides are equal to each other
+# '==' means equivalence and it is used to evaluate whether objects on the two sides are equal to each other.
 # For example: compare whether 1+1 equals 2
 1+1==2
 
-# '|' means 'inclusive or'. Either one of the conditions is ture or both statements are true can make an '|' statement True.
+# '|' means 'inclusive or'. A '|' statement will be True when a least one conditional statement is True. 
 # For example: subsetting data for which either continent is Europe or year is 1952 or both are true. 
 new_df=data[(data['continent']=='Europe')|(data['year']== 1952)]
 
-# ^ means 'exclusive or'. Only either one of the conditions can make an '^' statement True.
-# For example: subsetting data for which either continent is Europe or year is 1952.
+# ^ means 'exclusive or'. A '^' statement will be True when only one of the conditional statements is True. 
+# For example: subsetting data for which either continent is Europe or year is 1952, but not for both continent is Europe and year is 1952.
 new_df=data[(data['continent']=='Europe')^(data['year']== 1952)]
-
 ```
 
 ### •	Describe the difference between .loc and .iloc. Provide an example of how to extract a series of consecutive observations from a data frame. Stretch goal: provide an example of how to extract all observations from a series of consecutive columns.
@@ -93,10 +92,18 @@ import os
 import requests
 import pandas as pd
 
+data_folder = 'data'
+if not os.path.exists(data_folder):
+    os.makedirs(data_folder)
+    
+file_name_short = 'ctp_' + str(dt.now(tz = pytz.utc)).replace(' ', '_') + '.csv'
+file_name = os.path.join(data_folder, file_name_short)
+
 url = "https://api.covidtracking.com/v1/states/daily.csv"
 r = requests.get(url)
 with open(file_name, 'wb') as f:
   f.write(r.content)
+
 data = pd.read_csv(file_name)
 ```
 
