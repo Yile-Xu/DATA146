@@ -85,7 +85,7 @@ data.iloc[0:11]
 data.iloc[:,0:5]
 ```
 ### •	Describe how an api works. Provide an example of how to construct a request to a remote server in order to pull data, write it to a local file and then import it to your current work session.
-API stands for Application Programming Interface and it is the software intermediary that delivers your request to the provider which you're requesting from and then delivers the response back to you.
+API stands for Application Programming Interface and it is the software intermediary that delivers your request to the provider (can be an website) and then delivers the response back to you.
 ```python
 # Example:
 import os
