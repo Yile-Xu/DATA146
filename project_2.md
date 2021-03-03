@@ -8,7 +8,7 @@ Ordinal data is also numerical data, but unlike continuous data, only the order 
 
 Nominal data is categorical like labels. Example: country, color, or gender. 
 
-A model that incorporates all types of data: For a model to predict wine's quality index which is the target, features can include the type of the wine, the price of wine, volatile acidity level, and chlorides level. The price of the wine, the volatile acidity level, and the chlorides level are continuous data. The wine quality index is an ordinal data. The type of the wine is a nominal data. 
+A model that incorporates all types of data: For a model to predict wine's quality index which is the target, features can include the type of the wine (red or white), the price of wine, volatile acidity level, and chlorides level. The price of the wine, the volatile acidity level, and the chlorides level are continuous data. The wine quality index is an ordinal data. The type of the wine is a nominal data. 
 
 ### - Comment out the seed from your randomly generated data set of 1000 observations and use the beta distribution to produce a plot that has a mean that approximates the 50th percentile. Also produce both a right skewed and left skewed plot by modifying the alpha and beta parameters from the distribution. Be sure to modify the widths of your columns in order to improve legibility of the bins (intervals). Include the mean and median for all three plots.
 
