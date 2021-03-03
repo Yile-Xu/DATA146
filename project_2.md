@@ -10,9 +10,9 @@ A model that incorporate all types of data: result of a 50-meter dash on the Oly
 
 |Athlete Name|Country|Time| Rank|
 |------------|:-----:|:--:|----:|
-|A           |    |    |     |
-|B           |    |    |      |         
-|C           |    |    |      | 
+|Athlete A           |    |    |     |
+|Athlete B           |    |    |      |         
+|Athelete C           |    |    |      | 
 
 ### - Comment out the seed from your randomly generated data set of 1000 observations and use the beta distribution to produce a plot that has a mean that approximates the 50th percentile. Also produce both a right skewed and left skewed plot by modifying the alpha and beta parameters from the distribution. Be sure to modify the widths of your columns in order to improve legibility of the bins (intervals). Include the mean and median for all three plots.
 
