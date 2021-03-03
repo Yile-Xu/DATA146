@@ -52,4 +52,4 @@ I think the row data plot best communicates the change in life expectancy from 1
 ### Plot after logarithmic transformation:
 ![](project2_7.png)
 
-I think the plot after logarithmic transformation best communicates the change in population as it clearly shows the increasing trend of population on average. Because of several huge outliers, the boxplot drawn from raw data is difficult to read.
+The plot after logarithmic transformation best communicates the change in population as it clearly shows the increasing trend of population on average. Because of several huge outliers, the boxplot drawn from raw data is difficult to read.
