@@ -7,3 +7,4 @@
 ## Project
 
 1. [Project 1](https://yile-xu.github.io/DATA146/project_1.html)
+2. [Project 2](https://yile-xu.github.io/DATA146/project_2.html)
