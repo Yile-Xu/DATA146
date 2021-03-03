@@ -26,7 +26,7 @@ Mean=0.09593092764661984
 
 Median=0.08272532110992745
 
-### Light Skewed:
+### Left Skewed:
 ![](project2_3.png)
 
 mean=0.906886211618868
