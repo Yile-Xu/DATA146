@@ -45,7 +45,7 @@ median=0.9201854902191089
 ### Plot after logarithmic transformation:
 ![](project2_5.png)
 
-I think the row data plot best communicates the change in life expectancy from 1952 to 2007 and we can easily compare the life expecancy change on it. There is no need to apply a logaristhmic transformation.
+I think the row data plot best communicates the change in life expectancy from 1952 to 2007. Although both graphs show the difference clearly, without logarithmic transformation, the labels on x axis of raw data plot directly reflect the real life expectancy, which makes it easier to interpret. So I think there is no need to apply a logaristhmic transformation in this case.
 
 ### - Using the seaborn library of functions, produce a box and whiskers plot of population for all countries at the given 5-year intervals. Also apply a logarithmic transformation to this data and produce a second plot. Which of the two resulting box and whiskers plots best communicates the change in population amongst all of these countries from 1952 to 2007?
 
@@ -54,4 +54,4 @@ I think the row data plot best communicates the change in life expectancy from 1
 ### Plot after logarithmic transformation:
 ![](project2_7.png)
 
-The plot after logarithmic transformation best communicates the change in population as it clearly shows the increasing trend of population on average. Because of several huge outliers, the boxplot drawn from raw data is difficult to read.
+The plot after logarithmic transformation best communicates the change in population as it clearly shows both the box itself and the increasing trend of population on average. Because of several huge outliers, the boxplot drawn from raw data is difficult to read.
