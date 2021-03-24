@@ -1,4 +1,4 @@
-# Mid Term Correction
+# Midterm Exam Correction
 
 ### Question 24: If we had looked at MSE instead of R2 when doing our Lasso regression (question 20), what would we have determined the optimal value for alpha to be? Enter your answer to 5 decimal places, for example: 0.12345
 
@@ -56,5 +56,8 @@ idx = np.argmin(avg_te_mse)
 print('Optimal alpha value: ' + format(a_range[idx], '.10f'))
 print('Testing score for this value: ' + format(avg_te_mse[idx], '.5f'))
 ```
+The optimal alpha value for this lasso regression is 0.00186.
+
+Reflection: Although my original code was almost the same as displayed above, it kept returning 0.00100 for the optimal alpha value. However, when I cleared all the output and only ran the cell for the lasso regression again, it returned  the correct answer 0.00186. I am not really sure what caused this problem, but I think it may be associated with the data stored for each variable in the memory space. Some variables were kept overwritten when I ran different codes for each question, so when I got to question 24, the data stored in the variable I need may not be the original one, which will lead to a different optimal alpha value. That's why if I only run the cell for question 24 after clearing all the output, it returns the correct value. 
 
 
