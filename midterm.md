@@ -182,6 +182,18 @@ plt.ylabel('Avg MSE')
 plt.show()
 ```
 
+### Question 23: 
+The optimal alpha value is 0.0186.
+```python
+idx = np.argmin(las_te_mse)
+print(las_a_range[idx], las_tr[idx], las_te[idx], las_tr_mse[idx], las_te_mse[idx])
+
+plt.plot(las_a_range, las_te_mse,'or')
+plt.xlabel('$\\alpha$')
+plt.ylabel('Avg MSE')
+plt.show()
+```
+
 
 
 
