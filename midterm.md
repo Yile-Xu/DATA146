@@ -6,8 +6,8 @@ from sklearn.datasets import fetch_california_housing
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import KFold
 from sklearn.linear_model import Ridge
 from sklearn.linear_model import Lasso
@@ -182,7 +182,7 @@ plt.ylabel('Avg MSE')
 plt.show()
 ```
 
-### Question 23: 
+### Question 24: 
 The optimal alpha value is 0.0186.
 ```python
 idx = np.argmin(las_te_mse)
