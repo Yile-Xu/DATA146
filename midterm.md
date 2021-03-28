@@ -1,6 +1,6 @@
 # Midterm Exam 
 
-### Import libraries and dataset
+### Import libraries and the dataset
 ```python
 from sklearn.datasets import fetch_california_housing
 import pandas as pd
@@ -63,7 +63,7 @@ def DoKFold(model, X, y, k, standardize=False, random_state=146):
 ```
 
 ### Question 15: 
-Most strong correlated feature is the MedInc (median income).
+Most strongly correlated feature is the MedInc (median income).
 ```python
 df=X_df.copy()
 df['MedHouseVal']=y
@@ -81,13 +81,13 @@ df_scaled.corr()
 ```
 
 ### Question 17:
-R^2 = 0.47.
+R^2 is 0.47.
 ```python
 np.round(np.corrcoef(X_df['MedInc'],y)[0][1]**2, 2)
 ```
 
 ### Question 18:
-Mean R^2 value on the test folds for the linear regression is 0.6198.
+Mean R^2 value on the test folds for the linear regression is 0.60198.
 ```python
 k=20
 lin_reg = LinearRegression()
