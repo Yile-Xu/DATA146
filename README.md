@@ -13,3 +13,7 @@
 ## Correction
 1. [Midterm Exam Correction](https://yile-xu.github.io/DATA146/midterm.html)
 
+## Extra Credit Response
+1. [3/24 Clare Heinbaugh Talk](https://yile-xu.github.io/DATA146/extra1.html)
+
+
