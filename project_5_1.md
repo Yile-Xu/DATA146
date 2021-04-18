@@ -1,10 +1,10 @@
 # Project 5 - Part 1
 
 ## 1
-I first imported all the necessay library and read the persons.csv file as a dataframe. Then I dropped all the null values and convert values from "age" and "edu" column to integers. Variable "wealthC" and "wealthI" are selected as two features, respectively stored in y1 and y2. All other variables are selected as features and stored in X. 
+I first imported all the necessary libraries and read the persons.csv file as a dataframe. Then I dropped all the null values and convert values from "age" and "edu" columns to integers. Variables "wealthC" and "wealthI" are selected as two different targets, respectively stored in y1 and y2. All other variables are selected as features and stored in X. 
 
 ## 2
-For linear regression performed without standardizing features: the training MSE is 0.4427858616687968 and the testing MSE 0.44375686734675845. The training R^2 is 0.7358365784782854 and testing R2 is 0.7350536560539935. All the coefficients are listed below: 
+For linear regression performed without standardizing features, the training MSE is 0.4427858616687968 and the testing MSE 0.44375686734675845. The training R^2 is 0.7358365784782854 and testing R^2 is 0.7350536560539935. All the coefficients are listed below: 
 ```python
 [ 2.98970945e-02  9.67390196e-03 -6.38467524e-04  8.43055863e-02
   3.76762978e-02  6.37043200e-02 -1.44625881e-01  1.04798398e-01
@@ -22,7 +22,7 @@ For linear regression performed without standardizing features: the training MSE
  -2.61066540e-01  4.30192552e-01  6.05330241e-02  4.01997751e-01
  -6.47088457e-01  1.54316701e-02 -2.47015887e-01  2.47015887e-01]
 ```
-For the linear regression performed with standardizing features: the training MSE is 0.4427945482293184 and the testing MSE 0.4437350936808688. The training R^2 is 0.7358313931567183 and the testing R^2 is 0.7350665348612118. All the coefficients are listed below: 
+For linear regression performed with standardizing features, the training MSE is 0.4427945482293184 and the testing MSE 0.4437350936808688. The training R^2 is 0.7358313931567183 and the testing R^2 is 0.7350665348612118. All the coefficients are listed below: 
 ```python
 [ 1.11905627e-01  4.78233225e-03 -1.27413909e-02  6.95635498e-02
   1.14744270e+10  1.34766720e+10  1.19310172e+10  1.22969878e+10
@@ -40,16 +40,16 @@ For the linear regression performed with standardizing features: the training MS
   1.01274274e+10  4.82896394e+09  9.41193511e+09  1.98545575e+11
   1.99838807e+11  2.84338320e+10  2.00758027e+10  2.00758027e+10]
 ```
-Comparing the results from linear regression models with and without standardization, we can see that standardization has no big impact on the both MSE and R^2, which means it does not improve the prediction. However, coefficients changed significantly as the absolute values of most coefficients increase by about 10^10 after standardization.
+Comparing the results from linear regression models with and without standardization, we can see that standardization has no big impact on both MSE and R^2, which means it does not improve the prediction. However, coefficients changes significantly as the absolute values of most coefficients increase by about 10^10 after standardization.
 
 ## 3
-For the Ridge regression, at the optimal alpha value of 175.263158, the R^2 training score is 0.7358493784953863 and the R^2 testing score is 0.7351236991279391. It seems that both scores are similar to those from a linear regression model and there is no big improvement. 
+For the Ridge regression, at the optimal alpha value of 175.263158, the R^2 training score is 0.7358493784953863 and the R^2 testing score is 0.7351236991279391. It seems that both scores are similar to those from the linear regression model and there is no big improvement. 
 
 ## 4
 For the Lasso regression, after many convergence warnings, I finally got the results. At the optimal alpha value of 0.000263, the R^2 training score is 0.7358489661514309 and the R^2 testing score is 0.7351234674610403. It is also similar to results from both linear regression and ridge regression model. 
 
 ## 5
-After choosing "wealthI" as the target, I ran the previous three regression model again. For linear regression performed without standardizing features: the training MSE is 1750165639.7899222 and the testing MSE 1754642088.3005753. The training R^2 is 0.8258372599154002 and testing R2 is 0.825019735491136. All the coefficients are listed below: 
+After choosing "wealthI" as the target, I ran the previous three regression models again. For linear regression performed without standardizing features: the training MSE is 1750165639.7899222 and the testing MSE 1754642088.3005753. The training R^2 is 0.8258372599154002 and testing R2 is 0.825019735491136. All the coefficients are listed below: 
 ```python
 [ 2.30123282e+03  9.94929395e+02 -5.49723912e+01  6.55782229e+03
   2.90223788e+03  4.02921426e+03 -1.01608378e+04  1.13805316e+04
@@ -86,17 +86,18 @@ For the linear regression performed with standardizing features: the training MS
   1.11751861e+15  5.32855663e+14  1.03856707e+15  2.19086610e+16
   2.20513636e+16  3.13755261e+15  2.21512928e+15  2.21512928e+15]
  ```
-Both results from linear regression models with and without standardization are similar again, suggesting an minimal influence of standardization on the results. Coefficients also changed significantly this time as the absolute values of most coefficients increase by about 10^10 after standardization. Both training and testing R^2 score improved compared to those using "wealthC" as the target while the MSE become really huge, which may not be a good sign. 
+Both results from linear regression models with and without standardization are similar again, suggesting a minimal influence of standardization on the results. Coefficients also change significantly this time as the absolute values of most coefficients increase by about 10^10 after standardization. Both training and testing R^2 scores improve compared to those using "wealthC" as the target while the MSE become really huge, which may not be a good sign. 
 
 For the Ridge regression, at the optimal alpha value of 140.263158, the R^2 training score is 0.8258461945313584 and the R^2 testing score is 0.8251526444362514. 
-For the Lasso regression, again there appear many convergence warnings. At the optimal alpha value of 3.157895, the R^2 training score is 0.8258470314163497 and the R^2 testing score is 0.8251524416080761. It seems that all three models produces similar testing results again. 
+
+For the Lasso regression, again there appear many convergence warnings. At the optimal alpha value of 3.157895, the R^2 training score is 0.8258470314163497 and the R^2 testing score is 0.8251524416080761. It seems that all three models produce similar testing results again. 
 
 ## 6 
-Using all the R^2 testing score for comparison, the model using Ridge regression and “wealthI” as a target produced best results in predicting wealth of all persons throughout the smaller West African country. For the same target, all the models produced similar R^2 scores, same up to 3 decimal places, which suggests that there are no big differences in the predicative power of all models for this dataset. 
+Using all the R^2 testing scores for comparison, the model using Ridge regression and “wealthI” as the target produces the best results in predicting wealth of all persons throughout the smaller West African country. For the same target, all the models produce similar R^2 scores, same up to 3 decimal places, which suggests that there is no big difference among the predicative power of all three models for this dataset. 
 
-Moreover, it is obvious that all the testing and training results for “wealthI” are much more higher than the “wealthC”. This suggests all the features are more correlated with “wealthI” than the “wealthC”. 
+Moreover, it is obvious that all the testing and training results for “wealthI” are much more better than the “wealthC”. This suggests all the features are more correlated with the “wealthI” than the “wealthC”. 
 
-The following graphs show the distribution of R^2 testing scores for different alpha values, which assists the process of finding optimal alpha values. 
+The following graphs show the distribution of R^2 testing scores for different alpha values, which assist the process of finding optimal alpha values. 
 
 **Ridge regression for “wealthC”:** 
 ![](project5_1.png)
