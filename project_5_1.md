@@ -1,4 +1,43 @@
 # Project 5 - Part 1
 
 ## 1
-I first imported all the necessay library and read the persons.csv file as a dataframe. 
+I first imported all the necessay library and read the persons.csv file as a dataframe. Then I dropped all the null values and convert values from "age" and "edu" column to integers. Variable "wealthC" and "wealthI" are selected as two features, respectively stored in y1 and y2. All other variables are selected as features and stored in X. 
+
+## 2
+For linear regression performed without standardizing features: the training MSE is 0.4427858616687968 and the testing MSE 0.44375686734675845. The training R^2 is 0.7358365784782854 and testing R2 is 0.7350536560539935. All the coefficients are listed below: 
+```python
+[ 2.98970945e-02  9.67390196e-03 -6.38467524e-04  8.43055863e-02
+  3.76762978e-02  6.37043200e-02 -1.44625881e-01  1.04798398e-01
+  1.87652675e-01 -2.56443037e-01 -2.39624286e-01 -7.49413493e-02
+  3.13537183e-01 -1.29375716e-01  3.46372019e-01  2.36045366e-01
+ -1.31767622e-01 -1.93088554e-01 -1.19919815e-01  4.02182375e-02
+  1.43444074e-01 -1.83662312e-01  1.08564479e-01  3.91654133e-01
+  1.71336248e-01  1.25008948e-02  1.03047674e-01 -1.22829684e-01
+ -2.13411012e-01 -2.96695286e-01 -3.84816959e-01 -3.41312726e-01
+  2.97115684e-01  2.12661232e-02  2.53580431e-01  3.90390110e-01
+  3.59515489e-01  1.91557667e-01  3.95876607e-01  1.49877776e-01
+ -2.44680391e-02  5.98656063e-02 -1.28187885e-01 -5.40840495e-01
+ -5.61757796e-01 -1.46994818e-01 -1.12933617e-01 -3.19006051e-02
+ -3.24323668e-01  3.24323668e-01 -6.12257088e-02  6.12257088e-02
+ -2.61066540e-01  4.30192552e-01  6.05330241e-02  4.01997751e-01
+ -6.47088457e-01  1.54316701e-02 -2.47015887e-01  2.47015887e-01]
+```
+For the linear regression performed with standardizing features: the training MSE is 0.4427945482293184 and the testing MSE 0.4437350936808688. The training R^2 is 0.7358313931567183 and the testing R^2 is 0.7350665348612118. All the coefficients are listed below: 
+```python
+[ 1.11905627e-01  4.78233225e-03 -1.27413909e-02  6.95635498e-02
+  1.14744270e+10  1.34766720e+10  1.19310172e+10  1.22969878e+10
+  1.31383211e+10  1.22562481e+10  1.22743758e+10  1.36219238e+10
+  1.34566100e+10  1.32926103e+10  1.80992514e+10  1.57257566e+10
+  1.19028215e+10  1.16982687e+10  1.27277352e+10 -3.09307414e+11
+ -4.67270580e+11 -5.06254246e+11  4.50837491e+09  4.48330779e+09
+  8.17118056e+09  9.46024653e+09  4.89441156e+10  2.42046781e+10
+  1.03132741e+10  1.50284121e+10  4.29490124e+10  3.04456255e+09
+  5.28989383e+09  8.29323657e+09  1.08160570e+10  9.98540548e+10
+  4.30255894e+11  1.65580843e+11  7.93708083e+10  3.18168869e+10
+  6.48331531e+11  3.91920830e+11  4.23031945e+11  8.19498692e+11
+  3.36357003e+10  4.87925343e+10  3.08850999e+11  6.35980851e+10
+  1.15803871e+11  1.15803871e+11 -9.12158008e+10 -9.12158008e+10
+  1.01274274e+10  4.82896394e+09  9.41193511e+09  1.98545575e+11
+  1.99838807e+11  2.84338320e+10  2.00758027e+10  2.00758027e+10]
+```
+Comparing the results from linear regression models with and without standardization, we can see that standardization has no big impact on the both MSE and R^2, which means it does not improve the prediction. However, coefficients changed significantly as the absolute values of most coefficients increase by about 10^10 after standardization.   
