@@ -96,7 +96,8 @@ Using all the R^2 testing score for comparison, the model using Ridge regression
 
 Moreover, it is obvious that all the testing and training results for “wealthI” are much more higher than the “wealthC”. This suggests all the features are more correlated with “wealthI” than the “wealthC”. 
 
-The following graphs show the distribution of R^2 testing scores for different alpha values, which assists the process of finding optimal alpha values.  
+The following graphs show the distribution of R^2 testing scores for different alpha values, which assists the process of finding optimal alpha values. 
+
 **Ridge regression for “wealthC”:** 
 ![](project5_1.png)
 **Lasso regression for “wealthC”:** 
