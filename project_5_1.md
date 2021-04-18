@@ -91,6 +91,20 @@ Both results from linear regression models with and without standardization are 
 For the Ridge regression, at the optimal alpha value of 140.263158, the R^2 training score is 0.8258461945313584 and the R^2 testing score is 0.8251526444362514. 
 For the Lasso regression, again there appear many convergence warnings. At the optimal alpha value of 3.157895, the R^2 training score is 0.8258470314163497 and the R^2 testing score is 0.8251524416080761. It seems that all three models produces similar testing results again. 
 
+## 6 
+Using all the R^2 testing score for comparison, the model using Ridge regression and “wealthI” as a target produced best results in predicting wealth of all persons throughout the smaller West African country. For the same target, all the models produced similar R^2 scores, same up to 3 decimal places, which suggests that there are no big differences in the predicative power of all models for this dataset. 
+
+Moreover, it is obvious that all the testing and training results for “wealthI” are much more higher than the “wealthC”. This suggests all the features are more correlated with “wealthI” than the “wealthC”. 
+
+The following graphs show the distribution of R^2 testing scores for different alpha values, which assists the process of finding optimal alpha values.  
+**Ridge regression for “wealthC”:** 
+![](project5_1.png)
+**Lasso regression for “wealthC”:** 
+![](project5_2.png)
+**Ridge regression for “wealthI”:** 
+![](project5_3.png)
+**Lasso regression for “wealthI”:**
+![](project5_4.png)
 
 
 
