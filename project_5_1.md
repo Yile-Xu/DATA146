@@ -86,14 +86,14 @@ For the linear regression performed with standardizing features: the training MS
   1.11751861e+15  5.32855663e+14  1.03856707e+15  2.19086610e+16
   2.20513636e+16  3.13755261e+15  2.21512928e+15  2.21512928e+15]
  ```
-Both results from linear regression models with and without standardization are similar again, suggesting a minimal influence of standardization on the results. Coefficients also change significantly this time as the absolute values of most coefficients increase by about 10^10 after standardization. Both training and testing R^2 scores improve compared to those using "wealthC" as the target while the MSE become really huge, which may not be a good sign. 
+Both results from linear regression models with and without standardization are similar again, suggesting a minimal influence of standardization on the results. Coefficients also change significantly this time as the absolute values of most coefficients increase by about 10^10 after standardization. Both training and testing R^2 scores improve compared to those using "wealthC" as the target while the MSE become really huge, which is largely due to the fact that "wealthI" are all big values. After I transfromed the "wealthI" target using a logrithmic transformation, both training and testing MSE became much smaller and reasonable. For the linear regression without standardization, the training MSE is 22.69812705471449 and the testing MSE is 5.269839423690227. For the linear regression after standardization, the training MSE is 2.4883802957902246 and testing MSE is 5.3944123007857465.
 
 For the Ridge regression, at the optimal alpha value of 140.263158, the R^2 training score is 0.8258461945313584 and the R^2 testing score is 0.8251526444362514. 
 
 For the Lasso regression, again there appear many convergence warnings. At the optimal alpha value of 3.157895, the R^2 training score is 0.8258470314163497 and the R^2 testing score is 0.8251524416080761. It seems that all three models produce similar testing results again. 
 
 ## 6 
-Using all the R^2 testing scores for comparison, the model using Ridge regression and “wealthI” as the target produces the best results in predicting wealth of all persons throughout the smaller West African country. For the same target, all the models produce similar R^2 scores, same up to 3 decimal places, which suggests that there is no big difference among the predicative power of all three models for this dataset. 
+Using all the R^2 testing scores for comparison, the model using Ridge regression and “wealthI” as the target produces the best results in predicting wealth of all persons throughout the smaller West African country. For the same target, all the models produce similar R^2 scores, same up to 3 decimal places, which suggests that there is no big difference among the predicative power of all three models for this dataset and standardization also has minimal impact. 
 
 Moreover, it is obvious that all the testing and training results for “wealthI” are much more better than the “wealthC”. This suggests all the features are more correlated with the “wealthI” than the “wealthC”. 
 
