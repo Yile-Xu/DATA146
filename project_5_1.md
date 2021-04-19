@@ -93,7 +93,7 @@ For the Ridge regression, at the optimal alpha value of 140.263158, the R^2 trai
 For the Lasso regression, again there appear many convergence warnings. At the optimal alpha value of 3.157895, the R^2 training score is 0.8258470314163497 and the R^2 testing score is 0.8251524416080761. It seems that all three models produce similar testing results again. 
 
 ## 6 
-Using all the R^2 testing scores for comparison, the model using Ridge regression and “wealthI” as the target produces the best results in predicting wealth of all persons throughout the smaller West African country. For the same target, all the models produce similar R^2 scores, same up to 3 decimal places, which suggests that there is no big difference among the predicative power of all three models for this dataset and standardization also has minimal impact. 
+Using all the R^2 testing scores for comparison, the model using Ridge regression and “wealthI” as the target produces the best results in predicting wealth of all persons throughout the smaller West African country. For the same target, we can see that all the models produce similar R^2 scores, same up to 3 decimal places, which suggests that there is no big difference among the predicative power of all three models for this dataset and standardization also has minimal impact. 
 
 Moreover, it is obvious that all the testing and training results for “wealthI” are much more better than the “wealthC”. This suggests all the features are more correlated with the “wealthI” than the “wealthC”. 
 
