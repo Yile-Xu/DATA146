@@ -1,7 +1,7 @@
 # Project 5 - Part 2
 
 ### 1. 
-I first imported all the necessary libraries and read the city_persons.csv file as a data frame. Then I dropped all the null values and convert values from “age” and “edu” columns to integers. Variables “wealthC” are selected the target and stored in y. All other variables are selected as features and stored in X.
+I first imported all the necessary libraries and read the city_persons.csv file as a data frame. Then I dropped all the null values and converted values from “age” and “edu” columns to integers. Variable “wealthC” is selected as the target and stored in y. All other variables are selected as features and stored in X.
 
 ### 2. 
 For K-nearest neighbors classification method without adding a distance weight, at optimal k value of 67, the testing score is 0.5485602733040508. All the training and testing scores at range (50, 80) are shown the on plot below. 
@@ -50,10 +50,10 @@ When number of estimators = 500, the training score is 0.79296875, and testing s
 When number of estimators = 1000, the training score is 0.79296875, and testing score is 0.513909224011713.   
 When number of estimators = 5000, the training score is 0.79296875, and testing score is 0.5080527086383602.   
 
-Recoding the wealth classes 2 and 3 into a single outcome does not change the testing accuracy significantly, but for all models, the testing accuracy increases slightly. Since classes 2 has considerably less observations than all other classes, aggregating it with class 3 may lead to more balanced class numbers, which may  improve the model to some degrees. 
+Recoding the wealth classes 2 and 3 into a single outcome does not change the testing accuracy significantly, but for all models, the testing accuracy increases slightly. Since classes 2 has considerably less observations than all other classes, aggregating it with class 3 may lead to more balanced class numbers, which may  improves the model to some degrees. 
 
 ### 6.
-Despite of the fact that all the models produce similar testing accuracy, the logistic regression model after recoding classes 2 and 3 into a single one produces the best testing results of 0.5627135187896535 in predicting wealth of all persons throughout the large West African capital city being described. All three models improve slightly after the recoding while the logistic regression always produces slightly better results than other two models. It is also the only model without the overfitting problem as it produces similar training and testing scores. 
+Despite of the fact that all the models produce similar testing accuracy, the logistic regression model after recoding classes 2 and 3 into a single one produces the best testing results of 0.5627135187896535 in predicting wealth of all persons throughout the large West African capital city being described. All three models improve slightly after the recoding while the logistic regression always produces slightly better result than other two models. It is also the only model without the overfitting problem as it produces similar training and testing scores. 
 
 
 
