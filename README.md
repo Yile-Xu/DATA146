@@ -10,6 +10,7 @@
 2. [Project 2](https://yile-xu.github.io/DATA146/project_2.html)
 3. [Project 3](https://yile-xu.github.io/DATA146/project_3.html)
 4. [Project 5.1](https://yile-xu.github.io/DATA146/project_5_1.html)
+5. [Project 5.2](https://yile-xu.github.io/DATA146/project_5_2.html)
 
 ## Correction
 1. [Midterm Exam Correction](https://yile-xu.github.io/DATA146/midterm.html)
